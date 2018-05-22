@@ -15,7 +15,7 @@ const app = new Clarifai.App({
 
 const LoggedIn = (props) => props.isLoggedIn ? props.children : 
 (props.userState ==="home") ? 
-(<div className="flex justify-center">Please signup to use the face recognition service</div>): null;
+(<div className="flex justify-center pa5">Please signup to use the face recognition service</div>): null;
 
 export default class App extends Component {
   constructor(){
@@ -70,11 +70,10 @@ export default class App extends Component {
   render() {
     return (
       <div>
+      <Logo />
       <Navigation isLoggedIn={this.state.isLoggedIn} ChangeUserState={this.ChangeUserState}/>
       <SignInBox userState={this.state.userState} ChangeUserState={this.ChangeUserState}/>
       <RegisterBox userState={this.state.userState} ChangeUserState={this.ChangeUserState}/>
-      <Logo />
-
       <LoggedIn isLoggedIn={this.state.isLoggedIn} userState={this.state.userState}>
       <WelcomeBar />
       <InputBox onURLInput={this.onURLInput}/>
