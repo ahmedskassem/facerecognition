@@ -12,7 +12,7 @@ const Navigation = ({isLoggedIn, ChangeUserState}) => {
     }else{
         return (
             <div className="nav">
-            <div className="ma1 pointer"><a onClick={() => ChangeUserState('signout')}>Sign Out</a></div>
+            <div className="ma1 pointer"><a onClick={() => ChangeUserState('home')}>Sign Out</a></div>
             </div>
         );        
     }

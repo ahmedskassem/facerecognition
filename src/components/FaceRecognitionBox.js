@@ -2,7 +2,6 @@ import React from 'react';
 import './FaceRecognitionBox.css';
 
 const FaceRecognitionBox = ({image, box}) => {
-    console.log(box);
     if(image){
         return (
             <div className="flex justify-center">
